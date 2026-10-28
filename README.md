@@ -1,6 +1,10 @@
 
 # Weather Dashboard
 
+## 🌐 Live Demo
+
+[View Weather Dashboard](https://lilasia904.github.io/weatherdashboard/)
+
 A responsive weather dashboard built using HTML, CSS, and JavaScript.
 
 This application allows users to search for cities worldwide and view weather forecasts, precipitation radar, and air quality information.
