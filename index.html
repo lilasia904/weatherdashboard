@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Weather Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <h1>Weather Dashboard</h1>
+  <p>Check the weather in any city.</p>
+</header>
+
+
+<main>
+  <section class="weather-search">
+    <h2>Search Weather</h2>
+
+    <form id="weatherForm">
+      <label for="cityInput">Enter a City:</label>
+
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Example: Detroit"
+        required
+      >
+
+      <button type="submit">Get Weather</button>
+    </form>
+
+  </section>
+
+    <section class="weather-results">
+            <h2>Current Weather</h2>
+               
+              <p id="weatherMessage" role="status">
+                Search for a city to see the weather.
+              </p>
+
+                <p>
+                  <span id="weatherIcon" aria-hidden="true"></span>
+                  <span id="weatherCondition">--</span>
+                </p>
+
+            <div class="weather-cards">
+
+              <article class="weather-card">
+                <h3>Temperature</h3>
+                <p id="temperatureValue">--°F</p>
+              </article>
+
+              
+              <article class="weather-card">
+                <h3>Humidity</h3>
+                <p id="humidityValue">--%</p>
+              </article>
+
+
+              <article class="weather-card">
+                <h3>Wind Speed</h3>
+                  <p id="windValue">-- mph</p>
+              </article>
+
+            </div>
+
+    </section>
+
+        <section class="forecast-section">
+          <h2>5-Day Forecast</h2>
+
+          <p id="forecastMessage">
+            Search for a city to see the forecast.
+          </p>
+
+          <div id="forecastCards" class="forecast-cards"></div>
+        </section>
+   
+      <section class="hourly-section">
+        <h2>Hourly Forecast</h2>
+
+        <p id="hourlyMessage">
+          Search for a city to see the hourly forecast.
+        </p>
+
+        <div id="hourlyCards" class="hourly-cards"></div>
+      </section>
+
+    <section class="extra-weather">
+
+      <div class="radar-section">
+        <h2>🌧️ Precipitation Radar</h2>
+
+        <p id="radarMessage">
+          Search for a city to view precipitation.
+        </p>
+
+        <div id="radarMap"></div>
+
+      </div>
+
+      <div class="air-quality-section">
+        <h2>🍃 Air Quality</h2>
+
+        <p id="aqiValue">--</p>
+
+        <p id="aqiStatus">
+          Search for a city to view air quality.
+        </p>
+
+       
+
+<div class="aqi-scale">
+  <span id="aqiMarker" class="aqi-marker"></span>
+</div>
+
+<p id="aqiDescription"></p>
+
+    </section>
+
+
+</main>
+
+
+</body>
+</html>
